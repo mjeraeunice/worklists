@@ -48,10 +48,6 @@ fun sortedByAge(people: MutableList<Person>): List<Person> {
     return people.sortedByDescending { it.age }
 }
 
-
-
-
-
 //Write a function that takes in a list of Car objects each with a
 //registration and mileage attribute and returns the average mileage of
 //all the vehicles in the list.
@@ -62,7 +58,7 @@ fun car():Double{
     val car3=Vehicle("KPZ4537",5.0)
     val cars= listOf(car1, car2, car3)
     var all=listOf(car1, car2, car3)
-    var sumMileage=all.sumOf { miles->miles.mileage }
-    var avgMileage=sumMileage/3
+    var sumMileage=all.sumOf {miles->miles.mileage }
+    var avgMileage=sumMileage/all.size
     return avgMileage
 }
