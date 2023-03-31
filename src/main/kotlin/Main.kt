@@ -3,6 +3,7 @@ fun main() {
     println(heightsCalculated(listOf(55.0,20.0,23.0,22.0,65.0,55.0)))
     personDetails()
     println(car())
+    println(sortedByAge(mutableListOf()))
 
 
 }
@@ -39,8 +40,13 @@ data class Person(val name:String, val age:Int,val height:Int,val weight:Double)
     }
 //Given a list similar to the one above, write a function in which you will
 //create 2 more people objects and add them to the list at one go.
-
-
+fun sortedByAge(people: MutableList<Person>): List<Person> {
+    people.addAll(listOf(
+        Person("Appa", 25, 100, 70.0),
+        Person("Milly ", 30, 165, 60.0)
+    ))
+    return people.sortedByDescending { it.age }
+}
 
 
 
